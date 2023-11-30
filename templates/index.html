@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}INDEX{% endblock %}
+{% block extra %}{% endblock %}
+{% block content %}
+    <h1 class="mt-4">NBA stats</h1>
+        <div class="row">
+            <div class="col-6">
+                <div class="east">
+                    <img src="{{ url_for('static', filename='img/east.png') }}" class="card-img-top" alt="Logo del equipo">
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover clas">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Posición</th>
+                                <th scope="col">Equipo</th>
+                                <th scope="col">Récord</th>
+                              </tr>
+                            </thead>
+                            <tbody id="clas_este">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="west">
+                    <img src="{{ url_for('static', filename='img/west.png') }}" class="card-img-top" alt="Logo del equipo">
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover clas">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Posición</th>
+                                <th scope="col">Equipo</th>
+                                <th scope="col">Récord</th>
+                              </tr>
+                            </thead>
+                            <tbody id="clas_oeste">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="lideres">
+                    <img src="#" class="card-img-top" alt="Logo del equipo">
+                    <div class="card-body d-flex flex-column">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Posición</th>
+                                    <th scope="col">Jugador</th>
+                                    <th scope="col">PPP</th>
+                                </tr>
+                                </thead>
+                                <tbody id="max_anotadores">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="lideres">
+                    <img src="#" class="card-img-top" alt="Logo del equipo">
+                    <div class="card-body d-flex flex-column">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Posición</th>
+                                    <th scope="col">Jugador</th>
+                                    <th scope="col">RBP</th>
+                                </tr>
+                                </thead>
+                                <tbody id="max_reboteadores">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="lideres">
+                    <img src="#" class="card-img-top" alt="Logo del equipo">
+                    <div class="card-body d-flex flex-column">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Posición</th>
+                                    <th scope="col">Jugador</th>
+                                    <th scope="col">PPP</th>
+                                </tr>
+                                </thead>
+                                <tbody id="max_asistentes">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

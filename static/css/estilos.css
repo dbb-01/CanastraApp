@@ -1,0 +1,101 @@
+.east {
+    outline: 5px solid;
+    outline-color: rgb(18, 158, 223);
+    padding: 7px;
+    background-color: white;
+}
+.east:hover{
+    outline: 10px solid;
+    outline-color: rgb(18, 158, 223);
+
+}
+.west {
+    outline: 5px solid;
+    outline-color: rgb(221, 49, 6);
+    padding: 7px;
+    background-color: white;
+}
+.west:hover{
+    outline: 10px solid;
+    outline-color: rgb(221, 49, 6);
+}
+.row {
+    margin-top: 10px;
+}
+
+.card{
+    outline: 5px solid;
+    padding: 7px;
+    margin-top: 5px;
+    outline-color: rgb(78, 78, 78);
+}
+
+.card:hover{
+    outline: 7px solid;
+
+    outline-color: white;
+
+}
+
+body {
+    background-color: rgb(168, 168, 168);
+}
+
+.mt-4{
+    color: white;
+}
+
+
+
+
+
+.clasificacion{
+    font-size: larger;
+    text-align: center;
+
+}
+th {
+    text-align: center;
+}
+img {
+    padding-bottom: 5%;
+}
+
+
+
+.clas tbody tr.PO *{
+    background-color: rgb(177, 224, 170);
+
+}
+.clas tbody tr.PI *{
+    background-color: rgb(223, 208, 143);
+
+}
+.clas tbody tr.OUT *{
+    background-color: rgb(238, 159, 145);
+
+}
+
+tbody tr.lider *{
+    background-color: rgb(177, 224, 170);
+    font-size: large;
+    font-weight: bold; 
+    
+}
+tbody tr{
+   text-align: center;
+    
+}
+
+#players_table_filter label input{
+    background-color: #f3f3f3; 
+    color: #0e0000; 
+    border: 1px solid #fff; 
+}
+
+#teams_filter label input{
+    background-color: #f3f3f3; 
+    color: #0e0000; 
+    border: 1px solid #fff; 
+}
+

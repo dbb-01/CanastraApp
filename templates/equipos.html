@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Estadísticas de equipos{% endblock %}
+{% block extra %}
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+{% endblock %}
+{% block content %}
+<h1 class="mt-4">NBA stats</h1>
+        <div class="row">
+            <div class="col-6">
+                <div class="teams">
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover display" id = "teams">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Equipo</th>
+                                <th scope="col">Récord</th>
+                                <th scope="col">W_PCT</th>
+                                <th scope="col">PPP</th>
+                                <th scope="col">RPP</th>
+                                <th scope="col">APP</th>
+                                <th scope="col">FG</th>
+                                <th scope="col">FG3</th>
+                                <th scope="col">STL</th>
+                                <th scope="col">BLK</th>
+
+                              </tr>
+                            </thead>
+                            <tbody id="teams_body">
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename='js/equipos.js') }}"></script>
+{% endblock %}
