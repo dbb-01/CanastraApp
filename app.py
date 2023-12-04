@@ -5,6 +5,11 @@ from nba_api.stats.endpoints import leaguestandings
 from nba_api.stats.endpoints import leagueleaders
 from nba_api.stats.endpoints import leaguedashteamstats
 from nba_api.stats.endpoints import leaguedashplayerstats
+from nba_api.stats.endpoints import scoreboard
+from datetime import date
+
+from datetime import datetime, timedelta
+
 
 
 app = Flask(__name__)
@@ -21,6 +26,10 @@ def equipos():
 @app.route('/jugadores')
 def jugadores():
     return render_template('jugadores.html')
+
+@app.route('/games')
+def games():
+    return render_template('last_games.html')
 
 @app.route('/hello')
 def hello():
@@ -225,6 +234,21 @@ def players_stats():
         jugadores_lista.append(equipo_dict)
 
     return jsonify(jugadores_lista)
+
+@app.route('/last_games', methods=['GET'])
+def last_games():
+    try:
+        #Noite anterior
+        dia_anterior = date.today()-timedelta(days=1)
+        games_data = scoreboard.Scoreboard(day_offset=0, game_date=dia_anterior, league_id='00').get_dict()
+        
+        return jsonify(games_data)
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"error": str(e)})
+     
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

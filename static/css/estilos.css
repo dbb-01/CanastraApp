@@ -99,3 +99,7 @@ tbody tr{
     border: 1px solid #fff; 
 }
 
+td.win {
+    background-color: rgb(222, 238, 212);
+    
+}
