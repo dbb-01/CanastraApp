@@ -14,7 +14,7 @@
 {% endblock %}
 {% block content %}
 
-<h1 class="mt-4">NBA stats</h1>
+<h1 class="mt-4">Encontros</h1>
         <div class="row">
             <div class="col">
                 <div class="teams">
@@ -33,13 +33,13 @@
                                 
                             </tbody>
                         </table>
-                        <div id ="detailed">hola</div>
+                        <table class="table table-hover display" id ="detailed"></table>
                     </div>
                 </div>
             </div>
         </div>
 {% endblock %}
 {% block js %}
-            <script src="{{ url_for('static', filename='js/games.js') }}" ></script>
+            <script src="{{ url_for('static', filename='js/lastGames.js') }}" ></script>
 
 {% endblock %}

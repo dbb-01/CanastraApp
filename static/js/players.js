@@ -35,11 +35,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
             new DataTable('#players_table', {
                 buttons: ['showSelected'],
+                buttons: [
+                    {
+                        extend:'showSelected',
+                        text: 'Mostar seleccionados',
+                        
+                    }
+                ],
                 dom: 'Bfrtip',
                 select: true,
-                pageLength: 30  // Configurar el número de filas por página
+                pageLength: 30,
+                language: {
+                    processing: "Procesando...",
+                    search: "Buscar:",
+                    loadingRecords: "Cargando...",
+                    info: "Mostrando a páxina _PAGE_ de _PAGES_ páxinas",
+                    zeroRecords: "Non se encontraron rexistros",
+                    emptyTable: "Non hay datos disponibles na tabla",
+                    paginate: {
+                        first: "Primeiro",
+                        previous: "Anterior",
+                        next: "Seguinte",
+                        last: "Derradeiro"
+                    },
 
-            });
+            }});
         } else {
             console.error('Error al cargar las estadísticas de los jugadores.');
         }

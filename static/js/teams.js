@@ -35,12 +35,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
             new DataTable('#teams', {
                 buttons: ['showSelected'],
+                buttons: [
+                    {
+                        extend:'showSelected',
+                        text: 'Mostar seleccionados',
+                        
+                    }
+                ],
                 dom: 'Bfrtip',
                 select: true,
-                pageLength: 30 
+                pageLength: 30,
+                language: {
+                    processing: "Procesando...",
+                    search: "Buscar:",
+                    loadingRecords: "Cargando...",
+                    info: "Mostrando _PAGE_ de _PAGES_ páxinas",
+                    zeroRecords: "Non se encontraron rexistros",
+                    emptyTable: "Non hay datos disponibles na tabla",
+                    paginate: {
+                        first: "Primeiro",
+                        previous: "Anterior",
+                        next: "Seguinte",
+                        last: "Derradeiro"
+                    },
+                buttons: {
+                    select: {
+                        rows: {
+                            _: "Seleccionado %d filas",
+                            0: "Haga clic en una fila para seleccionarla",
+                            1: "1 fila seleccionada"
+                            }
+                        }
 
-            });
-
+            }
+        }});
+        
         
         } else {
             console.error('Error al cargar el JSON.');

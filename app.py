@@ -10,6 +10,7 @@ from datetime import date
 
 from datetime import datetime, timedelta
 
+#PS C:\myNBAapp> flask --app app  run --debug
 
 
 app = Flask(__name__)
@@ -19,21 +20,18 @@ CORS(app)  # Habilita CORS para toda la aplicación
 def index():
     return render_template('index.html')
 
-@app.route('/equipos')
-def equipos():
-    return render_template('equipos.html')
+@app.route('/teams')
+def teams():
+    return render_template('teams.html')
 
-@app.route('/jugadores')
-def jugadores():
-    return render_template('jugadores.html')
+@app.route('/players')
+def players():
+    return render_template('players.html')
 
-@app.route('/games')
-def games():
-    return render_template('last_games.html')
+@app.route('/lastGames')
+def lastGames():
+    return render_template('lastGames.html')
 
-@app.route('/hello')
-def hello():
-    return 'Hello, World'
 
 #Clasificación ESTE
 @app.route('/obtener_clasificacion_este', methods=['GET'])

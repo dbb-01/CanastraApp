@@ -13,30 +13,30 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
 {% endblock %}
 {% block content %}
-<h1 class="mt-4">NBA stats</h1>
+
+<h1 class="mt-4">Xogadores</h1>
         <div class="row">
             <div class="col">
                 <div class="teams">
                     <div class="card-body">
-                        <table class="table table-bordered table-hover display" id = "teams">
+                        <table class="table table-bordered table-hover display" id = "players_table">
                             <thead class="thead-dark">
                               <tr>
+                                <th scope="col">Nombre</th>
                                 <th scope="col">Equipo</th>
-                                <th scope="col">Récord</th>
-                                <th scope="col">W_PCT</th>
-                                <th scope="col">PPP</th>
-                                <th scope="col">RPP</th>
-                                <th scope="col">APP</th>
-                                <th scope="col">FG</th>
-                                <th scope="col">FG3</th>
-                                <th scope="col">STL</th>
-                                <th scope="col">BLK</th>
-
+                                <th scope="col">Puntos</th>
+                                <th scope="col">%TC</th>
+                                <th scope="col">%T3</th>
+                                <th scope="col">Rebotes</th>
+                                <th scope="col">Asistencias</th>
+                                <th scope="col">Robos</th>
+                                <th scope="col">Tapones</th>
+                                <th scope="col">+/-</th>
                               </tr>
                             </thead>
-                            <tbody id="teams_body">
+                            <tbody id="players">
+                                
                             </tbody>
-                            
                         </table>
                     </div>
                 </div>
@@ -44,5 +44,5 @@
         </div>
 {% endblock %}
 {% block js %}
-    <script src="{{ url_for('static', filename='js/equipos.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/players.js') }}"></script>
 {% endblock %}
