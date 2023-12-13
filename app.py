@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 
 
 app = Flask(__name__)
-CORS(app)  # Habilita CORS para toda la aplicación
+CORS(app)  
 
 @app.route('/')
 def index():
@@ -245,8 +245,5 @@ def last_games():
         print(f"Error: {e}")
         return jsonify({"error": str(e)})
      
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)

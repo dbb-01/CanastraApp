@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (xhr.status === 200) {
             const data = JSON.parse(xhr.responseText);
             displayScores(data);
-            //asignar_eventos(data);
         }
     };
     xhr.send();
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let team_visitante = games[i][5];
             let pts_visitante = games[i][21];
             let team_local = games[i+1][5];
-            let pts_local = games[i+1][21]; // Ajusta el índice según la estructura de tus datos
+            let pts_local = games[i+1][21]; 
             let local_abreviation = games[i][4]
             let visitante_abreviation = games[i][4]
 
@@ -62,4 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
 
